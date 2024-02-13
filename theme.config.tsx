@@ -15,7 +15,10 @@ const config: DocsThemeConfig = {
         <meta property="og:title" content={frontMatter.title || "Yonode"} />
         <meta
           property="og:description"
-          content={frontMatter.description || "The Node.js Toolkit for Rapid Development."}
+          content={
+            frontMatter.description ||
+            "The Node.js Toolkit for Rapid Development."
+          }
         />
       </>
     );
@@ -25,20 +28,41 @@ const config: DocsThemeConfig = {
       titleTemplate: "%s - Yonode",
     };
   },
-  logo: "Yonode",
-  feedback: {
-    content: "Question? Give us feedback →",
-    labels: "Feedback",
+  banner: {
+    key: "v0.5.5-beta",
+    text: (
+      <a href="https://github.com/sharafdin/yonode/releases" target="_blank">
+        🎉 Yonode v0.5.5-beta is released. Read more →
+      </a>
+    ),
   },
+  logo: "Yonode",
+  logoLink: "http://yonode.org",
   project: {
     link: "https://github.com/sharafdin/yonode",
   },
   chat: {
     link: "https://discord.gg/GFUK9rS9",
   },
-  docsRepositoryBase: "https://github.com/sharafdin/yonode",
+  docsRepositoryBase: "https://github.com/sharafdin/docs.yonode.org",
+  feedback: {
+    content: "Question? Give us feedback →",
+    labels: "Feedback",
+  },
+  editLink: {
+    text: "Edit this page on GitHub",
+  },
   footer: {
-    text: "Yonode - The Node.js Toolkit for Rapid Development.",
+    // text: " - The Node.js Toolkit for Rapid Development.",
+    text: (
+      <span>
+        MIT {new Date().getFullYear()} ©{" "}
+        <a href="https://sharafdin.com" target="_blank">
+          Sharafdin
+        </a>
+        .
+      </span>
+    ),
   },
 };
 
