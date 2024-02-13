@@ -1,18 +1,26 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: 'Yonode',
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s - Yonode'
+    }
+  },
+  logo: "Yonode",
+  feedback: {
+    content: "Question? Give us feedback →",
+    labels: "Feedback",
+  },
   project: {
-    link: 'https://yonode.org',
+    link: "https://github.com/sharafdin/yonode",
   },
   chat: {
-    link: 'https://discord.gg/GFUK9rS9',
+    link: "https://discord.gg/GFUK9rS9",
   },
-  docsRepositoryBase: 'https://github.com/sharafdin/yonode',
+  docsRepositoryBase: "https://github.com/sharafdin/yonode",
   footer: {
-    text: 'Yonode - The Node.js Toolkit for Rapid Development. ',
+    text: "Yonode - The Node.js Toolkit for Rapid Development.",
   },
-}
+};
 
-export default config
+export default config;
