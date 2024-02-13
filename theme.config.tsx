@@ -1,18 +1,69 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import { useRouter } from "next/router";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: 'Yonode',
+  head: () => {
+    const { asPath, defaultLocale, locale } = useRouter();
+    const { frontMatter } = useConfig();
+    const url =
+      "https://docs.yonode.org" +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+
+    return (
+      <>
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={frontMatter.title || "Yonode"} />
+        <meta
+          property="og:description"
+          content={
+            frontMatter.description ||
+            "The Node.js Toolkit for Rapid Development."
+          }
+        />
+      </>
+    );
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s - Yonode",
+    };
+  },
+  banner: {
+    key: "v0.5.5-beta",
+    text: (
+      <a href="https://github.com/sharafdin/yonode/releases" target="_blank">
+        🎉 Yonode v0.5.5-beta is released. Read more →
+      </a>
+    ),
+  },
+  logo: "Yonode",
+  logoLink: "http://yonode.org",
   project: {
-    link: 'https://yonode.org',
+    link: "https://github.com/sharafdin/yonode",
   },
   chat: {
-    link: 'https://discord.gg/GFUK9rS9',
+    link: "https://discord.gg/GFUK9rS9",
   },
-  docsRepositoryBase: 'https://github.com/sharafdin/yonode',
+  docsRepositoryBase: "https://github.com/sharafdin/docs.yonode.org",
+  feedback: {
+    content: "Question? Give us feedback →",
+    labels: "Feedback",
+  },
+  editLink: {
+    text: "Edit this page on GitHub",
+  },
   footer: {
-    text: 'Yonode - The Node.js Toolkit for Rapid Development. ',
+    // text: " - The Node.js Toolkit for Rapid Development.",
+    text: (
+      <span>
+        MIT {new Date().getFullYear()} ©{" "}
+        <a href="https://sharafdin.com" target="_blank">
+          Sharafdin
+        </a>
+        .
+      </span>
+    ),
   },
-}
+};
 
-export default config
+export default config;
