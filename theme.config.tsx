@@ -44,7 +44,7 @@ const config: DocsThemeConfig = {
   chat: {
     link: "https://discord.gg/GFUK9rS9",
   },
-  docsRepositoryBase: "https://github.com/sharafdin/docs.yonode.org",
+  docsRepositoryBase: "https://github.com/sharafdin/docs.yonode.org/blob/main",
   feedback: {
     content: "Question? Give us feedback →",
     labels: "Feedback",
