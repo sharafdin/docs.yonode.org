@@ -32,7 +32,7 @@ const config: DocsThemeConfig = {
     key: "v0.5.5-beta",
     text: (
       <a href="https://github.com/sharafdin/yonode/releases" target="_blank">
-        🎉 Yonode v0.5.5-beta is released. Read more →
+        Yonode is under beta version. Read more →
       </a>
     ),
   },
