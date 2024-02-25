@@ -32,7 +32,7 @@ const config: DocsThemeConfig = {
     key: "v0.5.5-beta",
     text: (
       <a href="https://github.com/sharafdin/yonode/releases" target="_blank">
-        Yonode is under beta version. Read more →
+        🎉 Yonode will launch on Mar 9, 2024.
       </a>
     ),
   },
@@ -53,7 +53,6 @@ const config: DocsThemeConfig = {
     text: "Edit this page on GitHub",
   },
   footer: {
-    // text: " - The Node.js Toolkit for Rapid Development.",
     text: (
       <span>
         MIT {new Date().getFullYear()} ©{" "}
