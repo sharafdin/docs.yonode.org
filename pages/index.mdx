@@ -1,13 +1,63 @@
-# Introduction
- 
-Welcome to Yonode! The Node.js Toolkit for Rapid Development.
+## Overview
 
-## What is Yonode?
+Yonode templates, as part of a Node.js toolkit designed for rapid backend development, cater to developers working in both JavaScript and TypeScript environments. These templates streamline the initial setup and configuration process, allowing developers to focus more on crafting unique functionalities for their applications. The support for both JavaScript and TypeScript ensures that Yonode is accessible to a broad range of developers, accommodating different coding preferences and project requirements.
 
-Yonode is a Node.js toolkit that streamlines your workflow, enabling you to craft efficient server solutions rapidly.
+## Key Features
 
-## Installation
+**Dual-Language Support**
 
-```bash
+JavaScript and TypeScript: Yonode templates are available for both JavaScript and TypeScript, offering flexibility in choosing the language that best suits your project's needs or your personal preference. This dual-language support ensures that the benefits of Yonode, such as rapid development and adherence to best practices, are accessible to a wider developer community.
+
+**MVC Folder Structure**
+
+A pre-organized directory layout that follows the Model-View-Controller (MVC) architecture, designed to maintain clean code separation and enhance project scalability. This facilitates an organized development process for both current JavaScript projects and TypeScript projects.
+
+**Database Configurations**
+
+Templates come with pre-configured database setups, including examples or configurations for connecting to various types of databases (SQL, NoSQL) and possibly integrating Object-Relational Mapping (ORM) tools. These setups facilitate database interactions using object-oriented programming.
+
+**Authentication Flows**
+
+Yonode provides templates specifically designed for implementing secure authentication mechanisms, such as login, and registration.
+
+**Middleware Integrations**
+
+Includes common middleware setups for tasks like logging, error handling, request body parsing, and session management. These are crucial for request preprocessing, security enhancements, and extending functionality.
+
+**Environment Setup**
+
+Examples for managing environment variables and application configurations are provided, essential for defining variable settings across different environments without hard-coding sensitive information into the application code.
+
+## Yonode Templates
+
+### Overview
+
+Yonode templates, based on your previous descriptions and the context provided, refer to a set of predefined project structures or boilerplate provided by Yonode, a Node.js toolkit designed for rapid backend development. These templates are crafted to help developers kickstart their applications by reducing the initial setup and configuration time, enabling them to focus more on developing the unique functionalities of their applications. Here’s a breakdown of what Yonode templates might include, especially focusing on their role in streamlining backend development:
+
+### JavaScript
+
+The templates that support for **noAuth**:
+
+| Database   | ORMs                                                         |
+| ---------- | ------------------------------------------------------------ |
+| MongoDB    | [Mongoose](mongoose), [Prisma](prisma), [TypeORM](typeorm)   |
+| MySQL      | [Prisma](prisma), [Sequelize](sequelize), [TypeORM](typeorm) |
+| PostgreSQL | [Prisma](prisma), [Sequelize](sequelize), [TypeORM](typeorm) |
+
+The templates that support for **Auth**:
+
+| Database   | ORMs                                                           |
+| ---------- | -------------------------------------------------------------- |
+| MongoDB    | [Mongoose](mongoose), [PrismaTS](prisma), [TypeORM](typeorm)   |
+| MySQL      | [Prisma](prisma), [SequelizeTS](sequelize), [TypeORM](typeorm) |
+| PostgreSQL | [Prisma](prisma), [SequelizeTS](sequelize), [TypeORM](typeorm) |
+
+### TypeScript
+
+**TypeScript Support**: **Coming Soon in v1.5.0** - TypeScript support is not currently available, but it is a highly anticipated feature that will be included in Yonode version 1.5.0. This upcoming feature aims to provide developers with the benefits of type safety and the enhanced development experience that TypeScript offers.
+
+### Installation
+
+```bash copy
 npx yonode@latest
 ```
