@@ -24,9 +24,16 @@ const config: DocsThemeConfig = {
     );
   },
   useNextSeoProps() {
-    return {
-      titleTemplate: "%s - Yonode",
-    };
+    const { asPath } = useRouter()
+    if (asPath !== '/') {
+      return {
+        titleTemplate: '%s | Yonode'
+      }
+    }else{
+      return {
+        titleTemplate: 'Yonode'
+      }
+    }
   },
   banner: {
     key: "v0.5.5-beta",
