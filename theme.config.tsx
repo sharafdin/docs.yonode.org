@@ -39,7 +39,7 @@ const config: DocsThemeConfig = {
     key: "v0.5.5-beta",
     text: (
       <a href="https://github.com/sharafdin/yonode/releases" target="_blank">
-        🎉 Yonode will launch on Mar 9, 2024.
+        Yonode will launch on Mar 11, 2024.
       </a>
     ),
   },
